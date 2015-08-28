@@ -103,7 +103,7 @@ class OtpAuthenticatableTest < ActiveSupport::TestCase
 
     secret = u.otp_auth_secret
 
-    [3.minutes.from_now, 3.minutes.ago].each do |time|
+    [210.seconds.from_now, 210.seconds.ago].each do |time|
       token = ROTP::TOTP.new(secret).at(time)
       assert_equal false, u.valid_otp_token?(token)
     end

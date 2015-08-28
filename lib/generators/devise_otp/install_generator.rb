@@ -21,7 +21,7 @@ content = <<-CONTENT
   # Drift: a window which provides allowance for drift between a user's token device clock
   # (and therefore their OTP tokens) and the authentication server's clock.
   # Expressed in minutes centered at the current time. (Note: it's a number, *NOT* 3.minutes )
-  #config.otp_drift_window = 3
+  #config.otp_drift_window = 3.minutes
 
   # Users that have logged in longer than this time ago, are going to be asked their password
   # (and an OTP challenge, if enabled) before they can see or change their otp informations.
